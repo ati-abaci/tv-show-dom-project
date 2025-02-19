@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c2d38;
+}
+
+@font-face {
+  font-family: DMSerifDisplay-Regular;
+  src: url(../fonts/DMSerifDisplay-Regular.ttf);
+}
+
+.logo-img {
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#logo {
+  display: flex;
+  justify-content: start;
+}
+
+.search-input {
+  border-radius: 50px;
+  border: none;
+}
+
+.search-icon-span {
+  border-radius: 50px;
+  background-color: #3f404b;
+  border: none;
+}
+
+#search-icon {
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-control {
+  background-color: rgb(63, 64, 75);
+}
+
+.form-control:focus {
+  background-color: rgb(63, 64, 75);
+}
+
+.form-control::placeholder {
+  color: #c0c6c9;
+}
+
+#green-icon {
+  display: flex;
+  justify-content: end;
+}
+
+#green-icon img {
+  width: 35px;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+
+#movies-title {
+  background-color: #43454e;
+  color: #fff;
+  font-family: DMSerifDisplay-Regular;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+#shows-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.showCard {
+  width: 210px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.showCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding: 8px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overlay p {
+  margin: 4px 0;
+  font-size: 14px;
+  font-family: DMSerifDisplay-Regular;
+}
