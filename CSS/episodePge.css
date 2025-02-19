@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2c2d38;
+}
+
+@font-face {
+  font-family: DMSerifDisplay-Regular;
+  src: url(../fonts/DMSerifDisplay-Regular.ttf);
+}
+
+.logo-img {
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#logo {
+  display: flex;
+  justify-content: start;
+}
+#green-icon {
+  display: flex;
+  justify-content: end;
+}
+
+#green-icon img {
+  width: 35px;
+  height: 35px;
+  margin-top: 15px;
+  border-radius: 50%;
+}
+
+#episode-dropdown {
+  border: none;
+  padding: 5px;
+  height: 30px;
+  margin-top: 15px;
+  border-radius: 50px;
+  background-color: rgb(63, 64, 75);
+  color: #fff;
+}
+
+.episodes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.episode-card {
+  position: relative;
+  width: 250px;
+  height: 260px;
+  background-color: #3c3d4b;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+  transform: scale(1.05);
+}
+
+.episode-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.episode-card .play-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #13efa9;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.episode-card .play-button:hover {
+  background-color: #13efa9;
+}
+
+.episode-card .play-button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.episode-card .description-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
+  transition: all 0.3s ease; /* Smooth transition */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.episode-card:hover .description-container {
+  opacity: 1; /* Show on hover */
+  visibility: visible; /* Show on hover */
+}
+
+.episode-card .description-container p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.description-box {
+  position: absolute;
+  right: calc(100% + 10px);
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10;
+}
+
+.description-box p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
